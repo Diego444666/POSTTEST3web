@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecomL - Rekomendasi Lagu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="video-background">
+            <video autoplay loop muted playsinline>
+                <source src="videoiris.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <nav role="navigation">
+            <div class="container nav-container">
+                <a href="#" class="logo">RecomL</a>
+                <ul class="nav-links">
+                    <li><a href="LandingPage.html">Home</a></li>
+                    <li><a href="Tbs.html">Top Best song</a></li>
+                    <li><a href="#au">About Us</a></li>
+                    <li><button id="darkModeToggle" class="btn-toggle">🌙</button></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1>Temukan Lagu Sempurna untuk Mood Anda</h1>
+            <p>Gabungkan genre favorit dan suasana hati Anda untuk rekomendasi lagu yang personal.</p>
+            <a href="#mulai-sekarang" class="btn btn-primary">Mulai Sekarang</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="how-it-works">
+            <div class="container">
+                <h2>Bagaimana Cara Kerjanya?</h2>
+                <div class="steps-container">
+                    <article class="card">
+                        <div class="card-icon">1. 🎶</div>
+                        <h3>Pilih Genre</h3>
+                        <p>Pilih dari berbagai genre yang tersedia.</p>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon">2. 😊</div>
+                        <h3>Tentukan Mood</h3>
+                        <p>Sesuaikan pilihan lagu dengan suasana hati Anda.</p>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon">3. ✨</div>
+                        <h3>Dapatkan Rekomendasi</h3>
+                        <p>Kami akan menyajikan daftar lagu yang cocok untuk Anda.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="mulai-sekarang" class="recommendation-form-section">
+            <div class="container">
+                <h2>Mulai Rekomendasi Anda</h2>
+                <p>Pilih kombinasi genre dan mood di bawah ini, dan temukan lagu yang pas untuk Anda.</p>
+                <form id="recommendationForm" class="recommendation-form">
+                    <div class="form-group">
+                        <label>Pilih Genre:</label>
+                        <div class="choice-grid">
+                            <label class="choice-card">
+                                <input type="radio" name="genre" value="pop">
+                                <span>Pop</span>
+                            </label>
+                            <label class="choice-card">
+                                <input type="radio" name="genre" value="rock">
+                                <span>Rock</span>
+                            </label>
+                            <label class="choice-card">
+                                <input type="radio" name="genre" value="jazz">
+                                <span>Jazz</span>
+                            </label>
+                            <label class="choice-card">
+                                <input type="radio" name="genre" value="edm">
+                                <span>EDM</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Pilih Mood:</label>
+                        <div class="choice-grid">
+                            <label class="choice-card">
+                                <input type="radio" name="mood" value="happy">
+                                <span>Bahagia</span>
+                            </label>
+                            <label class="choice-card">
+                                <input type="radio" name="mood" value="sad">
+                                <span>Sedih</span>
+                            </label>
+                            <label class="choice-card">
+                                <input type="radio" name="mood" value="energetic">
+                                <span>Bersemangat</span>
+                            </label>
+                            <label class="choice-card">
+                                <input type="radio" name="mood" value="calm">
+                                <span>Tenang</span>
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Cari Lagu</button>
+                </form>
+                
+                <div id="resultsContainer"></div>
+            </div>
+        </section>
+
+        <section class="popular-recommendations">
+            <div class="container">
+                <h2>Rekomendasi Populer</h2>
+                <p>Dengarkan lagu-lagu pilihan yang paling sering dicari dan disukai.</p>
+                <div class="cards-container">
+                    <article class="card">
+                        <img src="image1.png" alt="Album cover for Sad Pop song" class="card-image">
+                        <div class="card-body">
+                            <h3>Sad + Pop</h3>
+                            <p>Lagu ini cocok untuk menemani saat-saat sedih dengan melodi yang menyentuh hati.</p>
+                            <figure>
+                                <audio controls>
+                                    <source src="Sal Priadi - Gala bunga matahari (Official Music Video).mp3" type="audio/mpeg">
+                                </audio>
+                                <figcaption>Sal Priadi - Gala Bunga Matahari</figcaption>
+                            </figure>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="image2.png" alt="Album cover for Neutral Rock song" class="card-image">
+                        <div class="card-body">
+                            <h3>Santai + Rock</h3>
+                            <p>Dengarkan lagu ini untuk menemani hari-hari biasa dengan semangat dan energi.</p>
+                            <figure>
+                                <audio controls>
+                                    <source src="Ozzy Osbourne - Mama, I’m Coming Home (Lyrics).mp3" type="audio/mpeg">
+                                </audio>
+                                <figcaption>Ozzy Osbourne - Mama, Im Coming Home</figcaption>
+                            </figure>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="image3.png" alt="Album cover for Happy EDM song" class="card-image">
+                        <div class="card-body">
+                            <h3>Ceria + EDM</h3>
+                            <p>Musik yang akan membuat Anda bersemangat dan ceria sepanjang hari.</p>
+                            <figure>
+                                <audio controls>
+                                    <source src="DJ Snake ft. Justin Bieber - Let Me Love You [Lyric Video].mp3" type="audio/mpeg">
+                                </audio>
+                                <figcaption>DJ Snake ft. Justin Bieber - Let Me Love You</figcaption>
+                            </figure>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <section id="au" class="about-us">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Tentang RecomL</h2>
+                        <p>RecomL adalah platform yang didesain untuk membantu Anda menemukan lagu yang tidak hanya sesuai dengan genre favorit, tetapi juga selaras dengan perasaan Anda saat ini. Kami percaya setiap mood punya lagunya sendiri.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 RecomL, Referensi dari <a href="https://www.chosic.com/">chosic</a>.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
